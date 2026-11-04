@@ -1,0 +1,22 @@
+[build-system]
+requires = ["setuptools>=77"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "wastewise"
+version = "0.1.0"
+description = "A small waste collection API with bin tracking and pickup planning."
+readme = "README.md"
+requires-python = ">=3.11"
+license = "MIT"
+dependencies = [
+    "fastapi==0.141.1",
+    "pydantic==2.13.4",
+    "uvicorn==0.52.1",
+]
+
+[project.optional-dependencies]
+dev = ["httpx==0.28.1"]
+
+[tool.setuptools.packages.find]
+where = ["src"]
